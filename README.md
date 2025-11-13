@@ -15,7 +15,7 @@ seven dimension table like Dim_Product, Dim_Promotion, Dim_Store, Dim_SaleTerrit
 For Dim_Store is not connect to Fact OnlineSales. 
 
 3. ETL Pipeline (Daily incremental data loading)
-- A [AdventureWork Source DB] ---> B [ETL <Extract>] 
+- A [AdventureWork Source DB] ---> B [ETL_Extract] 
 - B ---> C [Staging Area] 
 - C ---> D [ETL_Tranformation] 
 - D ---> E [Data Warehouse] 
