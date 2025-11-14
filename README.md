@@ -39,10 +39,14 @@ was created in SQL SERVER INTEGRATION SERVICE.
 1. Clone repository:
 2. Restore AdventureWorks database
 3. Execute DDL scripts in order
-- data-models/ddl/create_database.sql
-- data-models/staging/database.sql
-- data-models/dimensional/database.sql
-4. Run ETL packages through SSIS  
+- DB_Script_stanging.sql
+- DWH_DDL Script.sql
+- Script Create View for Join Tables and Procedure_DimDate.sql
+4. Run ETL packages through SSIS 
+  - Deploy the project to Integration Service Catalog (SSISDB) on the SQL Server instance
+  - Confirm that all connection managers, parameters, and environment configurations are correctly set in the SSIS catalog
+  - Validate the deployed packages to ensure they run successfully on the server
+  - Create a new job to automate the execution of the deployed SSIS packages
 
 
 
