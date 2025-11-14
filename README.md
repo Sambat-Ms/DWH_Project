@@ -36,7 +36,7 @@ was created in SQL SERVER INTEGRATION SERVICE.
 3. AdventureWorks sample database
 4. python exe : use to run ETL message alert to TelegramBot  
 - Step-by-Step Setup
-1. Clone repository:
+1. Clone repository:https://github.com/Sambat-Ms/DWH_Project.git 
 2. Restore AdventureWorks database
 3. Execute DDL scripts in order
 - DB_Script_stanging.sql
