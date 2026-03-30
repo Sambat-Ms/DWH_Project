@@ -36,6 +36,7 @@ The data model is designed using a Galaxy Schema (Fact Constellation) approach.
 - Dim_Date
 - Dim_Customer
 - Dim_Currency
+  
 **📌 Note: Dim_Store is not connected to Fact_OnlineSales due to business logic separation.**
 
 **3. ETL Pipeline (Daily Incremental Load)**
@@ -54,15 +55,21 @@ ETL Transformation
 Data Warehouse
 ```
   
-#### Technologies used 
-- Database [Microsoft SQL Server] 
-- ETL [SSIS Packages]
-- Development [SSMS, Visual Studio]
-- Source Data [AdventureWork2019] 
-##### Bussiness Questions
+# ⚙️ Technologies Used
+- **Database:** Microsoft SQL Server
+- **ETL Tool:** SQL Server Integration Services (SSIS)
+- **Development Tools:** SQL Server Management Studio (SSMS), Visual Studio
+- **Source Data:** AdventureWorks2019
+- **Automation:** Python (Telegram Bot alerts for ETL monitoring)
+  
+# 📈 Business Questions
+
+**This data warehouse is designed to answer key business questions:**
+
 1. Which products are the most profitable over time?
-2. How are sales trends performing across different regions and channels?
-3. Which customers contribute most to revenue growth?
+2. How do sales trends vary across regions and sales channels?
+3. Which customers generate the highest revenue contribution?
+   
 ###### Installation & Setup
 - Prerequisites
 1. SQL SERVER DATABASE: Use to store and process data pipeline and deploy ETL pipeline that
