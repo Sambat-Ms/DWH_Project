@@ -1,24 +1,59 @@
-# DWH_Project
-Data Warehouse implementation with ETL pipelines and dimensional modeling and business intelligence solutions
-## Project Overview
-  The scope of this project covers the end-to-end design and implementation of a Sales Data Warehouse(AdventureWorks_DWH) for Adventure Works Cycles. The focus is to transform the company’s existing transactional data into a structured analytical environment that supports strategic reporting and businessintelligence. 
-### Architecture
-1. Warehouse architecture design  
-The solution follows Two_tire architecture, a typical three-layer data warehouse architecture which includes Source Contains 
-- The AdventureWorks2019 transactional database 
-- Staging Database 
-- Data Warehouse 
-2. Data Modelimg design
-  
-Data model is designed using a Galaxy Schema approach contain two fact table are Fact StoreSale and Onlinesale, 
-seven dimension table like Dim_Product, Dim_Promotion, Dim_Store, Dim_SaleTerritory, Dim_Date, Dim_Customer, Dim_Currency. 
-For Dim_Store is not connect to Fact OnlineSales. 
+# 📊 DWH_Project
 
-3. ETL Pipeline (Daily incremental data loading)
-- A [AdventureWork Source DB] ---> B [ETL_Extract] 
-- B ---> C [Staging Area] 
-- C ---> D [ETL_Tranformation] 
-- D ---> E [Data Warehouse] 
+Data Warehouse Implementation with ETL Pipelines, Dimensional Modeling, and Business Intelligence
+
+# 📌 Project Overview
+
+This project presents the end-to-end design and implementation of a Sales Data Warehouse (AdventureWorks_DWH) for Adventure Works Cycles.
+
+The goal is to transform raw transactional data into a structured analytical system that supports strategic reporting, dashboards, and business intelligence insights.
+
+# 🏗️ Architecture
+
+**1. Data Warehouse Architecture Design**
+
+The solution follows a three-tier data warehouse architecture:
+
+- **Source Layer:**
+AdventureWorks2019 transactional database
+- **Staging Layer:**
+Intermediate data storage for cleaning and transformation
+- **Data Warehouse Layer:**
+Final structured analytical database for reporting and BI
+  
+**2. Data Modeling Design**
+
+The data model is designed using a Galaxy Schema (Fact Constellation) approach.
+
+**Fact Tables:**
+- Fact_Sales
+- Fact_OnlineSales
+**Dimension Tables:**
+- Dim_Product
+- Dim_Promotion
+- Dim_Store
+- Dim_SalesTerritory
+- Dim_Date
+- Dim_Customer
+- Dim_Currency
+**📌 Note: Dim_Store is not connected to Fact_OnlineSales due to business logic separation.**
+
+**3. ETL Pipeline (Daily Incremental Load)**
+
+The ETL process follows a structured pipeline:
+
+```
+AdventureWorks Source DB
+        ↓
+ETL Extract
+        ↓
+Staging Area
+        ↓
+ETL Transformation
+        ↓
+Data Warehouse
+```
+  
 #### Technologies used 
 - Database [Microsoft SQL Server] 
 - ETL [SSIS Packages]
