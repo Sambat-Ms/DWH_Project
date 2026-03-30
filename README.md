@@ -70,25 +70,32 @@ Data Warehouse
 2. How do sales trends vary across regions and sales channels?
 3. Which customers generate the highest revenue contribution?
    
-###### Installation & Setup
-- Prerequisites
-1. SQL SERVER DATABASE: Use to store and process data pipeline and deploy ETL pipeline that
-was created in SQL SERVER INTEGRATION SERVICE.
-2. VISUAL STUDIO & SSIS: Use to develop ETL pipeline for building data warehouse project.
-3. AdventureWorks sample database
-4. python exe : use to run ETL message alert to TelegramBot  
-- Step-by-Step Setup
-1. Clone repository:https://github.com/Sambat-Ms/DWH_Project.git 
-2. Restore AdventureWorks database
-3. Execute DDL scripts in order
-- DB_Script_stanging.sql
-- DWH_DDL Script.sql
-- Script Create View for Join Tables and Procedure_DimDate.sql
-4. Run ETL packages through SSIS 
-  - Deploy the project to Integration Service Catalog (SSISDB) on the SQL Server instance
-  - Confirm that all connection managers, parameters, and environment configurations are correctly set in the SSIS catalog
-  - Validate the deployed packages to ensure they run successfully on the server
-  - Create a new job to automate the execution of the deployed SSIS packages
+# 🛠️ Installation & Setup
+**Prerequisites:**
+- **SQL Server Database**
+    - Used for storing and processing data pipelines
+    - Required for SSIS execution
+- **Visual Studio + SSIS:**
+    - Used to develop ETL packages
+- **AdventureWorks Sample Database**
+    - Source system for transactional data
+- **Python (optional)**
+    - Used for ETL monitoring and Telegram bot notifications
+
+Step-by-Step Setup
+Clone the repository:
+git clone https://github.com/Sambat-Ms/DWH_Project.git
+
+Restore the AdventureWorks database in SQL Server
+Run SQL scripts in order:
+DB_Script_staging.sql
+DWH_DDL_Script.sql
+Create_Views_And_StoredProcedures.sql
+Deploy and run ETL packages:
+Deploy SSIS project to SSISDB (Integration Services Catalog)
+Verify all connection managers and parameters
+Validate package execution on SQL Server
+Create a SQL Server Agent Job to automate ETL execution
 
 
 
