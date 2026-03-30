@@ -84,15 +84,17 @@ Data Warehouse
 
 **Step-by-Step Setup**
 
-1. Clone the repository:
+1. **Clone the repository:**
 git clone https://github.com/Sambat-Ms/DWH_Project.git
 
-2. Restore the AdventureWorks database in SQL Server
-3. Run SQL scripts in order:
+2. **Restore the AdventureWorks database in SQL Server**
+   
+3. ** Run SQL scripts in order:**
 - DB_Script_staging.sql
 - DWH_DDL_Script.sql
 - Create_Views_And_StoredProcedures.sql
-4. Deploy and run ETL packages:
+  
+4. **Deploy and run ETL packages:**
 - Deploy SSIS project to SSISDB (Integration Services Catalog)
 - Verify all connection managers and parameters
 - Validate package execution on SQL Server
